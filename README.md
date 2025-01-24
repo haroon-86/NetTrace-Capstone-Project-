@@ -1,4 +1,4 @@
-![AltText](nettrace.png)
+![AltText](nettrace.webp)
 
 
 # NetTrace

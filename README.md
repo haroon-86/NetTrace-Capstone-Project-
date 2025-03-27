@@ -102,7 +102,7 @@ python3 advanced_key_logger.py
 
 ### Firebase Log Structure
 ```
-log3/
+log/
   ├── audio_recording.wav
   ├── clipboard.txt       # 'hanoon123'
   ├── key_log.txt         # 'chase bank login'

@@ -122,6 +122,60 @@ Audio recording finished.
 Logged sentence: chase bank login
 ```
 
+### Step-by-Step Flow: Client (Attacker) Side
+
+1. Client Runs NetTrace
+
+ - Executes the Python script:
+
+```python3 advanced_key_logger.py```
+
+        (Visible in client1.png - Terminal output showing script execution.)
+
+2. Firebase Collection Created
+
+  - A new Firestore collection (`log3`) is generated for this session.
+
+        (Visible in client2.png and client5.png - Firebase logs showing log3.)
+
+3. Data Collection Begins
+
+   - Keystrokes: Logs "`chase bank login`" as `Sentence_1` in `key_log.txt`.
+        (Visible in client4.png - Firestore document with logged sentence.)
+
+   - Clipboard: Captures `haroon123` in `clipboard.txt`.
+        (Visible in client3.png - Clipboard data stored in Firebase.)
+
+   - Screenshot: Saves `screenshot.png` of the victim’s screen (ex. Chase login page).
+        (Visible in client2.png - Screenshot listed in Firebase.)
+
+   - System Info: Logs hostname (`Haroons-MacBook-Pro.local`), OS, and hardware details.
+        (Visible in client6.png - System.txt contents in Firebase.)
+
+   - Audio: Records 5 seconds of audio (`audio_recording.wav`).
+        (Visible in client2.png - Audio file in Firebase.)
+
+4. Logs Uploaded to Firebase
+
+   - All data is pushed to Firestore under log3:
+
+         `log3/
+          ├── key_log.txt         # "chase bank login"
+          ├── clipboard.txt       # "hanoon123"
+          ├── screenshot.png      # Chase login page
+          ├── system.txt          # Hostname, OS details
+          └── audio_recording.wav # Ambient audio`
+
+5. Client Reviews Stolen Data
+
+    - Accesses Firebase console to view logs:
+
+        - Passwords (`clipboard.txt`).
+
+        - Screenshots (`screenshot.png`).
+
+        - Typed sentences (`key_log.txt`).'
+          
 ## Ethical Considerations
 
 NetTrace should only be used:

@@ -3,7 +3,7 @@
 
 # NetTrace
 
-**NetTrace** is a Python-based keylogger application developed to simulate the behavior of spyware. This project highlights the potential risks of malicious software, emphasizing the importance of cybersecurity awareness.
+**NetTrace** is a Python-based keylogger application developed to simulate the behavior of spyware. My capstone project highlights the potential risks of malicious software, emphasizing the importance of cybersecurity awareness.
 
 ## Key Features
 - **Keystroke Logging**: Captures user inputs from the keyboard in real time.

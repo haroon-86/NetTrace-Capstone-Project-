@@ -90,6 +90,24 @@ python3 advanced_key_logger.py
 ```
 
 ## Usage Examples
+### Step-by-Step Flow: User (Victim) Side
+
+1. User Searches for Chase Bank Login & Accesses Login Page
+
+   - Opens Google and types: chase bank login (logged in key_log.txt).
+
+        ![AltText](user1.png)
+
+2. User Copies Password
+
+   - Copies their password (haroon123) from a password manager or text file into login form.
+
+        ![AltText](user2.png)
+
+3. User Submits Login
+
+   - Clicks "Sign In," unknowingly sending credentials while NetTrace logs all activity.
+   
 ### Attack Scenario
 
 1. Victim searches for "chase bank login" (logged in key_log.txt)

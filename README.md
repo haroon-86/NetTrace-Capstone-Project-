@@ -151,15 +151,15 @@ Unauthorized use may violate:
 - **Cloud Storage**: Firebase Firestore for secure and real-time data management.
 
 ### Key Functions
-`collect_system_info()`: Gathers hostname, processor, and OS details
+- `collect_system_info()`: Gathers hostname, processor, and OS details
 
-`log_clipboard_contents()`: Monitors and records clipboard changes
+- `log_clipboard_contents()`: Monitors and records clipboard changes
 
-`capture_screenshot()`: Takes full-screen captures
+- `capture_screenshot()`: Takes full-screen captures
 
-`record_audio()`: Records 5-second audio clips
+- `record_audio()`: Records 5-second audio clips
 
-`record_keystrokes()`: Logs complete sentences on Enter key press
+- `record_keystrokes()`: Logs complete sentences on Enter key press
 
 ### Customization
 Modify these variables in the script for preferred time intervals:

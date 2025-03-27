@@ -29,13 +29,13 @@ Warning: This tool is intended for legal security research and authorized penetr
 ## Features
 ### Comprehensive Data Collection
 
-- Keystroke Logging: Captures typed sentences when Enter is pressed
+- Keystroke Logging: Captures user inputs from the keyboard in real time
 
 - Clipboard Monitoring: Records all copied text (including passwords)
 
 - Visual Context: Takes screenshots of the victim's screen
 
-- Audio Surveillance: Records ambient audio (5-second clips)
+- Audio Surveillance:  Captures audio through system microphones (5-second clips)
 
 - System Profiling: Collects hostname, processor, and OS details
 
@@ -90,11 +90,11 @@ python3 advanced_key_logger.py
 ```
 
 ## Usage Examples
-### Typical Attack Scenario
+### Attack Scenario
 
 1. Victim searches for "chase bank login" (logged in key_log.txt)
 
-2. Victim copies password "hanoon123" (captured in clipboard.txt)
+2. Victim copies password "haroon123" (captured in clipboard.txt)
 
 3. Victim enters credentials on Chase login page (screenshot.png captures the page)
 
@@ -141,8 +141,16 @@ Unauthorized use may violate:
 - Various state privacy laws
 
 ## Documentation
-### Key Functions
 
+### Technologies Used
+- **Python Libraries**:
+  - `Pynput`: For keylogging functionalities.
+  - `Pyperclip`: For clipboard monitoring.
+  - `PyAudio`: For audio capture.
+  - `PyScreenshot`: For capturing system screenshots.
+- **Cloud Storage**: Firebase Firestore for secure and real-time data management.
+
+### Key Functions
 `collect_system_info()`: Gathers hostname, processor, and OS details
 
 `log_clipboard_contents()`: Monitors and records clipboard changes
@@ -167,24 +175,5 @@ This tool is provided for educational and authorized security testing purposes o
 
 
 
-## Key Features
-- **Keystroke Logging**: Captures user inputs from the keyboard in real time.
-- **Clipboard Monitoring**: Tracks and logs clipboard data for further analysis.
-- **Audio Recording**: Captures audio through system microphones.
-- **Screenshot Capturing**: Takes periodic screenshots of the user's system.
-- **Cloud Integration**: Utilizes Firebase Firestore for secure storage of logs and seamless real-time data management.
 
-## Technologies Used
-- **Python Libraries**:
-  - `Pynput`: For keylogging functionalities.
-  - `Pyperclip`: For clipboard monitoring.
-  - `PyAudio`: For audio capture.
-  - `PyScreenshot`: For capturing system screenshots.
-- **Cloud Storage**: Firebase Firestore for secure and real-time data management.
 
-## Purpose
-This project serves as an educational tool, providing insights into the operations of spyware to promote cybersecurity awareness. **NetTrace** demonstrates how seemingly innocuous tools can compromise user privacy and security, stressing the need for vigilance against phishing and malware attacks.
-
-## Future Enhancements
-- Implementing user-specific log file naming for better data organization.
-- Expanding cross-platform compatibility to support both Windows and Linux environments.

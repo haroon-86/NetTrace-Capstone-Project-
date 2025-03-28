@@ -55,6 +55,26 @@ Warning: This tool is intended for legal security research and authorized penetr
 
 - Automatic log rotation with collection numbering
 
+## Technologies Used
+- **Python Libraries**:
+  - `Pynput`: For keylogging functionalities.
+  - `Pyperclip`: For clipboard monitoring.
+  - `PyAudio`: For audio capture.
+  - `PyScreenshot`: For capturing system screenshots.
+- **Cloud Storage**: Firebase Firestore for secure and real-time data management.
+
+## Key Functions
+- `collect_system_info()`: Gathers hostname, processor, and OS details
+
+- `log_clipboard_contents()`: Monitors and records clipboard changes
+
+- `capture_screenshot()`: Takes full-screen captures
+
+- `record_audio()`: Records 5-second audio clips
+
+- `record_keystrokes()`: Logs complete sentences on Enter key press
+
+
 ## Technical Details
 ### System Requirements
 
@@ -191,27 +211,6 @@ Unauthorized use may violate:
 - Electronic Communications Privacy Act
 
 - Various state privacy laws
-
-## Documentation
-
-### Technologies Used
-- **Python Libraries**:
-  - `Pynput`: For keylogging functionalities.
-  - `Pyperclip`: For clipboard monitoring.
-  - `PyAudio`: For audio capture.
-  - `PyScreenshot`: For capturing system screenshots.
-- **Cloud Storage**: Firebase Firestore for secure and real-time data management.
-
-### Key Functions
-- `collect_system_info()`: Gathers hostname, processor, and OS details
-
-- `log_clipboard_contents()`: Monitors and records clipboard changes
-
-- `capture_screenshot()`: Takes full-screen captures
-
-- `record_audio()`: Records 5-second audio clips
-
-- `record_keystrokes()`: Logs complete sentences on Enter key press
 
 ### Customization
 Modify these variables in the script for preferred time intervals:

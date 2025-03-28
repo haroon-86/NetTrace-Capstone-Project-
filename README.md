@@ -65,16 +65,16 @@ Warning: This tool is intended for legal security research and authorized penetr
 - Firebase service account credentials
 
 ### Dependencies
-```
-pip install firebase-admin pyperclip pyaudio pyscreenshot pynput
-```
+   ```
+   pip install firebase-admin pyperclip pyaudio pyscreenshot pynput
+   ```
 
 ### Installation
 1. Clone the repository:
-```
-git clone https://github.com/yourusername/NetTrace.git
-cd NetTrace
-```
+   ```
+   git clone https://github.com/yourusername/NetTrace.git
+   cd NetTrace
+   ```
 
 2. Set up Firebase:
 
@@ -85,11 +85,11 @@ cd NetTrace
 - Place it in /path/to/advanced_key_logs/service_account_key/
 
 3. Run the keylogger:
-```
-python3 advanced_key_logger.py
-```
+   ```
+   python3 advanced_key_logger.py
+   ```
 
-## Usage Examples
+## Usage Example
 ### Step-by-Step Flow: User (Victim) Side
 
 1. User Searches for Chase Bank Login & Accesses Login Page
@@ -107,78 +107,62 @@ python3 advanced_key_logger.py
 3. User Submits Login
 
    - Clicks "Sign In," unknowingly sending credentials while NetTrace logs all activity.
-   
-### Attack Scenario
-
-1. Victim searches for "chase bank login" (logged in key_log.txt)
-
-2. Victim copies password "haroon123" (captured in clipboard.txt)
-
-3. Victim enters credentials on Chase login page (screenshot.png captures the page)
-
-4. All data is uploaded to Firebase in real-time
-
-
-### Sample Output
-```
-Using collection log3 for this run.
-Log system.txt successfully stored in Firestore under collection log3.
-Log clipboard.txt successfully stored in Firestore under collection log3.
-Log screenshot.png successfully stored in Firestore under collection log3.
-Recording Audio...
-Log audio_recording.wav successfully stored in Firestore under collection log3.
-Audio recording finished.
-Logged sentence: chase bank login
-```
 
 ### Step-by-Step Flow: Client (Attacker) Side
 
 1. Client Runs NetTrace
 
    - Executes the Python script:
-```
-python3 advanced_key_logger.py
-```
+     
+     ```
+     python3 advanced_key_logger.py
+     ```
 
 2. Firebase Collection Created
 
    - A new Firestore collection (`log3`) is generated for this session.
 
-![AltText](client1.png)
+      ![AltText](client1.png)
 
 <br>
 
-3. Data Collection Begins
+           
+3. Data Collection in Firebase Begins
+ 
+    - **Firebase Log Structure**
+      ```
+      log3/
+      ├── key_log.txt         # "chase bank login"
+      ├── clipboard.txt       # "haroon123"
+      ├── screenshot.png      # Chase login page
+      ├── system.txt          # Hostname, OS details
+      └── audio_recording.wav # Ambient audio`
+      ```
+          
+   - Keystrokes: Logs "`chase bank login`" as `Sentence_1` in `key_log.txt`.
+      
+        ![AltText](client4.png) 
 
-    - Keystrokes: Logs "`chase bank login`" as `Sentence_1` in `key_log.txt`.
-        ![AltText](client4.png)
 
-
-     - Clipboard: Captures `haroon123` in `clipboard.txt`.
-        ![AltText](client3.png)
+   - Clipboard: Captures `haroon123` in `clipboard.txt`.
+       
+        ![AltText](client3.png) <br>
 
 
    - Screenshot: Saves `screenshot.png` of the victim’s screen (ex. Chase login page).
-        ![AltText](client2.png)
+     
+        ![AltText](client5.png) <br>
 
 
-    - System Info: Logs hostname (`Haroons-MacBook-Pro.local`), OS, and hardware details.
-        ![AltText](client6.png)
+   - System Info: Logs hostname (`Haroons-MacBook-Pro.local`), OS, and hardware details.
+      
+        ![AltText](client6.png) <br>
 
 
    - Audio: Records 5 seconds of audio (`audio_recording.wav`).
-        ![AltText](client2.png)
+     
+        ![AltText](client2.png) <br>
 
-
-4. Logs Uploaded to Firebase
-      - All data is pushed to Firebase:
-   #### Firebase Log Structure
-         `log3/
-          ├── key_log.txt         # "chase bank login"
-          ├── clipboard.txt       # "hanoon123"
-          ├── screenshot.png      # Chase login page
-          ├── system.txt          # Hostname, OS details
-          └── audio_recording.wav # Ambient audio`
 
 5. Client Reviews Stolen Data
 

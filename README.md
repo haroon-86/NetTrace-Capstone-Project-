@@ -109,7 +109,7 @@ Warning: This tool is intended for legal security research and authorized penetr
    python3 advanced_key_logger.py
    ```
 
-## Usage Example
+## Scenario
 ### Step-by-Step Flow: User (Victim) Side
 
 1. User Searches for Chase Bank Login & Accesses Login Page
@@ -194,6 +194,14 @@ Warning: This tool is intended for legal security research and authorized penetr
 
         - Typed sentences (`key_log.txt`).'
           
+## Customization
+Modify these variables in the script for preferred time intervals:
+```
+log_interval = 15          # Seconds between log cycles
+duration = 5               # Audio recording length
+log_directory = "/path/to/logs"  # Local log storage
+```
+
 ## Ethical Considerations
 
 NetTrace should only be used:
@@ -212,13 +220,6 @@ Unauthorized use may violate:
 
 - Various state privacy laws
 
-### Customization
-Modify these variables in the script for preferred time intervals:
-```
-log_interval = 15          # Seconds between log cycles
-duration = 5               # Audio recording length
-log_directory = "/path/to/logs"  # Local log storage
-```
 
 ## Disclaimer
 

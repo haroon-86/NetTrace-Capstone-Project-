@@ -118,15 +118,6 @@ python3 advanced_key_logger.py
 
 4. All data is uploaded to Firebase in real-time
 
-### Firebase Log Structure
-```
-log/
-  ├── audio_recording.wav
-  ├── clipboard.txt       # 'hanoon123'
-  ├── key_log.txt         # 'chase bank login'
-  ├── screenshot.png
-  └── system.txt          # Hostname, OS details
-```
 
 ### Sample Output
 ```
@@ -144,37 +135,44 @@ Logged sentence: chase bank login
 
 1. Client Runs NetTrace
 
- - Executes the Python script:
+   - Executes the Python script:
 ```
 python3 advanced_key_logger.py
 ```
 
 2. Firebase Collection Created
 
-  - A new Firestore collection (`log3`) is generated for this session.
+   - A new Firestore collection (`log3`) is generated for this session.
 
 ![AltText](client1.png)
+
+<br>
+
 3. Data Collection Begins
 
-   - Keystrokes: Logs "`chase bank login`" as `Sentence_1` in `key_log.txt`.
+    - Keystrokes: Logs "`chase bank login`" as `Sentence_1` in `key_log.txt`.
         ![AltText](client4.png)
 
-   - Clipboard: Captures `haroon123` in `clipboard.txt`.
+
+     - Clipboard: Captures `haroon123` in `clipboard.txt`.
         ![AltText](client3.png)
+
 
    - Screenshot: Saves `screenshot.png` of the victim’s screen (ex. Chase login page).
         ![AltText](client2.png)
 
-   - System Info: Logs hostname (`Haroons-MacBook-Pro.local`), OS, and hardware details.
+
+    - System Info: Logs hostname (`Haroons-MacBook-Pro.local`), OS, and hardware details.
         ![AltText](client6.png)
+
 
    - Audio: Records 5 seconds of audio (`audio_recording.wav`).
         ![AltText](client2.png)
 
+
 4. Logs Uploaded to Firebase
-
-   - All data is pushed to Firestore under log3:
-
+      - All data is pushed to Firebase:
+   #### Firebase Log Structure
          `log3/
           ├── key_log.txt         # "chase bank login"
           ├── clipboard.txt       # "hanoon123"
